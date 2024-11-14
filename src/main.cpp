@@ -85,7 +85,7 @@ $execute {
 		std::optional modOpt = event->getMod();
 		if(modOpt.has_value()){
 			Mod* mod = modOpt.value();
-			lowerDev = string::toLower(mod->getDeveloper());
+			lowerDev = string::toLower(mod->getDevelopers().at(0));
 		}
 		else {
 			//cheating to get dev username by ID until ModMetadata is exposed
